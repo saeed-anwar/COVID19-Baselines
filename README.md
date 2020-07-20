@@ -19,15 +19,7 @@ The models are built in PyTorch 1.5.1 and tested on Ubuntu 14.04/16.04 environme
 The COVID-19 is a highly contagious viral infection which played havoc on everyone's life in many different ways. According to the world health organization and scientists, more testing potentially helps governments and disease control organizations in containing the spread of the virus. The use of chest radiographs is one of the early screening tests to determine the onset of disease, as the infection affects the lungs severely. This study will investigate and automate the process of testing by using state-of-the-art CNN classifiers to detect the COVID19 infection. However, the viral could of many different types; therefore, we only regard for COVID19 while the other viral infection types are treated as non-COVID19 in the radiographs of various viral infections. The classification task is challenging due to the limited number of scans available for COVID19 and the minute variations in the viral infections. We aim to employ current state-of-the-art CNN architectures, compare their results, and determine whether deep learning algorithms can handle the crisis appropriately.
 
 ## Network
-![Network](/Figs/Net.PNG)
-The architecture of the proposed network. Different green colors of the conv layers denote different dilations while the smaller
-size of the conv layer means the kernel is 1x1. The second row shows the architecture of each EAM.
-
-<p align="center">
-  <img width="500" src="https://github.com/saeed-anwar/RIDNet/blob/master/Figs/FeatureAtt.PNG">
-</p>
-The feature attention mechanism for selecting the essential features.
-
+The network architectures and details are provided in our [paper](https://www.preprints.org/manuscript/202006.0189/v1)
 
 ## Test
 ### Quick start
