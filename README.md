@@ -25,8 +25,9 @@ The network architectures and details are provided in our [paper](https://www.pr
 ### Quick start
 1. Download the trained models of our paper.
 
-    The models for CT-COVID can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1NPMJ_RfB0w_8I_9ZXBHq11pu1xCHWWgC?usp=sharing). The total size for zip is **4.96GB**, which includes models, and images. Please cite the respective datasets.
-    The models for Xray-COVID can be downloaded from [Google Drive](). The total size for zip is **5.70GB**, which includes models, and images. Please cite the respective datasets.
+    The models for CT-COVID can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1NPMJ_RfB0w_8I_9ZXBHq11pu1xCHWWgC?usp=sharing). The total size for zip is **4.96GB**, which includes models, and images. 
+    
+    The models for Xray-COVID can be downloaded from [Google Drive](). The total size for zip is **5.70GB**, which includes models, and images. Please cite the respective datasets.Please cite the respective datasets.
 
 2. Cd to '/COVIDCT/CNN_methods' or '/COVIDXRAY/CNN_methods', then Cd in to the director of the method you want to test and run the following script.
 
@@ -64,13 +65,17 @@ Next Figure shows four different COVID19 infection radiographs from four differe
 </p>
 
 ### Quantitative Results
-<p align="center">
-  <img width="500" src="https://github.com/saeed-anwar/COVID19-Baselines/blob/master/Figs/CT-atten.png">
-</p>
-The performance of state-of-the-art algorithms on widely used publicly available DnD dataset in terms of PSNR (in dB) and SSIM. The best results are highlighted in bold.
+
+Five quantitative measures for state-of-the-art deep learning networks on COVIDCT in the following table. The variants of the same algorithm are differentiated via the number
+at the end of the method’s name.
 
 <p align="center">
-  <img width="500" src="https://github.com/saeed-anwar/COVID19-Baselines/blob/master/Figs/xray-atten.png">
+  <img width="500" src="https://github.com/saeed-anwar/COVID19-Baselines/blob/master/Figs/CT_table.png">
+</p>
+Quantitative results for state-of-the-art deep learning algorithms on COVIDx in the following table. The numbers at the end of the method name indicate variants of the same
+algorithms.
+<p align="center">
+  <img width="500" src="https://github.com/saeed-anwar/COVID19-Baselines/blob/master/Figs/xray_table.png">
 </p>
 
 For more information, please refer to our [papar](https://www.preprints.org/manuscript/202006.0189/v1)
