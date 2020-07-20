@@ -37,7 +37,7 @@ The network architectures and details are provided in our [paper](https://www.pr
     ```
 
 ## Results
-**All the results for attention on the CT images can be downloaded from GoogleDrive from [here](), the images of attention for Xray images from [here](). The size of the results is about ??MB** 
+**All the results for attention on the CT images can be downloaded from GoogleDrive from [here](https://drive.google.com/drive/folders/1f0gknwk16up7lrs58aebK351lg15TY2J?usp=sharing), the images of attention for Xray images from [here](https://drive.google.com/drive/folders/1f0gknwk16up7lrs58aebK351lg15TY2J?usp=sharing). The size of the results for CT-COVID19-Attention is about 400KB while for XRAY-COVID19-Attention is about 2.67MB** 
 
 ### Visual Results
 Representative images of the COVIDCT dataset employed for training and evaluation of algorithms
