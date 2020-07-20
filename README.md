@@ -28,8 +28,7 @@ The network architectures and details are provided in our [paper](https://www.pr
     The models for CT-COVID can be downloaded from [Google Drive](https://drive.google.com/open?id=1QxO6KFOVxaYYiwxliwngxhw_xCtInSHd). The total size for all models is 5MB.
     The models for Xray-COVID can be downloaded from [Google Drive](https://drive.google.com/open?id=1QxO6KFOVxaYYiwxliwngxhw_xCtInSHd). The total size for all models is 5MB.
 
-2. Cd to '/COVIDCT/CNN_methods' or '/COVIDXRAY/CNN_methods', the select the method you want to test.
-   run the following scripts.
+2. Cd to '/COVIDCT/CNN_methods' or '/COVIDXRAY/CNN_methods', then Cd in to the director of the method you want to test and run the following script.
 
     **You can use the following script to test the algorithms**
 
