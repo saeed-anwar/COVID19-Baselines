@@ -4,27 +4,19 @@
 This repository is for COVID19 detection from Radiographs introduced in the following paper
 
 [Muhammad Saqib](https://www.uts.edu.au/staff/muhammad.saqib), [Saeed Anwar](https://saeed-anwar.github.io/), Abbas Anwar, Lars Petersson, Nabin Sharma, Michael Blumenstein,  "[COVID19 detection from Radiographs: Is Deep Learning able to handle the crisis?](https://www.preprints.org/manuscript/202006.0189/v1)
-", preprint 
+", preprint, 2020 
 
-The model is built in PyTorch 0.4.0, PyTorch 0.4.1 and tested on Ubuntu 14.04/16.04 environment (Python3.6, CUDA9.0, cuDNN5.1). 
-
+The models are built in PyTorch 1.5.1 and tested on Ubuntu 14.04/16.04 environment (Python3.8, CUDA10.2). 
 
 ## Contents
 1. [Introduction](#introduction)
 2. [Network](#network)
-2. [Train](#train)
 3. [Test](#test)
 4. [Results](#results)
 5. [Citation](#citation)
-6. [Acknowledgements](#acknowledgements)
 
 ## Introduction
-Deep convolutional neural networks perform better on images containing spatially invariant noise (synthetic noise); however, their performance is limited on real-noisy photographs and requires multiple stage network modeling. To advance the practicability of denoising algorithms, this paper proposes a novel single-stage blind real image denoising network (RIDNet) by employing a modular architecture. We use a residual on the residual structure to ease the flow of low-frequency information and apply feature attention to exploit the channel dependencies. Furthermore, the evaluation in terms of quantitative metrics and visual quality on three synthetic and four real noisy datasets against 19 state-of-the-art algorithms demonstrate the superiority of our RIDNet.
-
-<p align="center">
-  <img width="600" src="https://github.com/saeed-anwar/RIDNet/blob/master/Figs/Front.PNG">
-</p>
-Sample results on a real noisy face image from RNI15 dataset.
+The COVID-19 is a highly contagious viral infection which played havoc on everyone's life in many different ways. According to the world health organization and scientists, more testing potentially helps governments and disease control organizations in containing the spread of the virus. The use of chest radiographs is one of the early screening tests to determine the onset of disease, as the infection affects the lungs severely. This study will investigate and automate the process of testing by using state-of-the-art CNN classifiers to detect the COVID19 infection. However, the viral could of many different types; therefore, we only regard for COVID19 while the other viral infection types are treated as non-COVID19 in the radiographs of various viral infections. The classification task is challenging due to the limited number of scans available for COVID19 and the minute variations in the viral infections. We aim to employ current state-of-the-art CNN architectures, compare their results, and determine whether deep learning algorithms can handle the crisis appropriately.
 
 ## Network
 ![Network](/Figs/Net.PNG)
@@ -36,9 +28,6 @@ size of the conv layer means the kernel is 1x1. The second row shows the archite
 </p>
 The feature attention mechanism for selecting the essential features.
 
-
-## Train
-**Will be added later**
 
 ## Test
 ### Quick start
@@ -97,19 +86,10 @@ Few more examples from SSID dataset.
 ## Citation
 If you find the code helpful in your resarch or work, please cite the following papers.
 ```
-@article{anwar2019ridnet,
-  title={Real Image Denoising with Feature Attention},
-  author={Anwar, Saeed and Barnes, Nick},
-  journal={IEEE International Conference on Computer Vision (ICCV-Oral)},
-  year={2019}
-}
-
-@article{Anwar2020IERD,
-  author = {Anwar, Saeed and Huynh, Cong P. and Porikli, Fatih },
-    title = {Identity Enhanced Image Denoising},
-    journal={IEEE Computer Vision and Pattern Recognition Workshops (CVPRW)},
-    year={2020}
+@article{Anwar2020COVID19Detect,
+       title={COVID19 detection from Radiographs: Is Deep Learning able to handle the crisis?},
+       author={Saqib, Muhammad and Anwar, Saeed and Anwar, Abbas and Petersson, Lars and Sharma, Nabin and Blumenstein, Michael},  
+       journal={Preprints-2020060189},
+       year={2020},
 }
 ```
-## Acknowledgements
-This code is built on [DRLN (PyTorch)](https://github.com/saeed-anwar/DRLN)
