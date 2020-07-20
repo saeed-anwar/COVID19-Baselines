@@ -31,57 +31,58 @@ The feature attention mechanism for selecting the essential features.
 
 ## Test
 ### Quick start
-1. Download the trained models for our paper and place them in '/TestCode/experiment'.
+1. Download the trained models of our paper.
 
-    The real denoising model can be downloaded from [Google Drive](https://drive.google.com/open?id=1QxO6KFOVxaYYiwxliwngxhw_xCtInSHd) or [here](https://icedrive.net/0/e3Cb4ifYSl). The total size for all models is 5MB.
+    The models for CT-COVID can be downloaded from [Google Drive](https://drive.google.com/open?id=1QxO6KFOVxaYYiwxliwngxhw_xCtInSHd). The total size for all models is 5MB.
+    The models for Xray-COVID can be downloaded from [Google Drive](https://drive.google.com/open?id=1QxO6KFOVxaYYiwxliwngxhw_xCtInSHd). The total size for all models is 5MB.
 
-2. Cd to '/TestCode/code', run the following scripts.
+2. Cd to '/COVIDCT/CNN_methods' or '/COVIDXRAY/CNN_methods', the select the method you want to test.
+   run the following scripts.
 
-    **You can use the following script to test the algorithm**
+    **You can use the following script to test the algorithms**
 
     ```bash
-    #RIDNET
-    CUDA_VISIBLE_DEVICES=0 python main.py --data_test MyImage --noise_g 1 --model RIDNET --n_feats 64 --pre_train ../experiment/ridnet.pt --test_only --save_results --save 'RIDNET_RNI15' --testpath ../LR/LRBI/ --testset RNI15
+    bash predict_scripts.sh
     ```
 
-
 ## Results
-**All the results for RIDNET can be downloaded from GoogleDrive from [SSID](https://drive.google.com/open?id=15peD5EvQ5eQmd-YOtEZLd9_D4oQwWT9e), [RNI15](https://drive.google.com/open?id=1PqLHY6okpD8BRU5mig0wrg-Xhx3i-16C) and [DnD](https://noise.visinf.tu-darmstadt.de/submission-detail). The size of the results is 65MB** 
+**All the results for attention on the CT images can be downloaded from GoogleDrive from [here](), the images of attention for Xray images from [here](). The size of the results is about ??MB** 
+
+### Visual Results
+Representative images of the COVIDCT dataset employed for training and evaluation of algorithms
+<p align="center">
+  <img width="500" src="https://github.com/saeed-anwar/COVID19-Baselines/blob/master/Figs/CT.png">
+</p>
+
+Following are the samples from the COVIDx dataset. The upper row shows the COVID19 infected examples, while the lower row presents
+the infection-free images
+<p align="center">
+  <img width="500" src="https://github.com/saeed-anwar/COVID19-Baselines/blob/master/Figs/Xray.png">
+</p>
+
+Next, we present the models on infected and non-infected radiographs. In Figure below, we present the CT images with feature attention where the red color indicates the region where the models have focused. The first three rows contain COVID19 infections, while the remaining two rows in Figure are infection-free.
+ 
+<p align="center">
+  <img width="500" src="https://github.com/saeed-anwar/COVID19-Baselines/blob/master/Figs/CT-atten.png">
+</p>
+
+Next Figure shows four different COVID19 infection radiographs from four different orientations. ResNet, DenseNet, and GoogleNet presented in the second, third, and fourth columns focused on most of the chest radiographs while the remaining models concentrated on particular regions of the chest. It is challenging for the models to pinpoint exactly the artifacts caused by COVID19, as is obvious from the feature attention mechanism.
+
+<p align="center">
+  <img width="500" src="https://github.com/saeed-anwar/COVID19-Baselines/blob/master/Figs/xray-atten.png">
+</p>
 
 ### Quantitative Results
 <p align="center">
-  <img width="500" src="https://github.com/saeed-anwar/RIDNet/blob/master/Figs/DnDTable.PNG">
+  <img width="500" src="https://github.com/saeed-anwar/COVID19-Baselines/blob/master/Figs/CT-atten.png">
 </p>
 The performance of state-of-the-art algorithms on widely used publicly available DnD dataset in terms of PSNR (in dB) and SSIM. The best results are highlighted in bold.
 
 <p align="center">
-  <img width="500" src="https://github.com/saeed-anwar/RIDNet/blob/master/Figs/SSIDTable.PNG">
+  <img width="500" src="https://github.com/saeed-anwar/COVID19-Baselines/blob/master/Figs/xray-atten.png">
 </p>
-The quantitative results (in PSNR (dB)) for the SSID and Nam datasets.. The best results are presented in bold.
 
-For more information, please refer to our [papar](https://arxiv.org/abs/1904.07396)
-
-### Visual Results
-![Visual_PSNR_DnD1](/Figs/DnD.PNG)
-A real noisy example from DND dataset for comparison of our method against the state-of-the-art algorithms.
-
-![Visual_PSNR_DnD2](/Figs/DnD2.PNG)
-![Visual_PSNR_Dnd3](/Figs/DnD3.PNG)
-Comparison on more samples from DnD. The sharpness of the edges on the objects and textures restored by our method is the best.
-
-<p align="center">
-  <img width="500" src="https://github.com/saeed-anwar/RIDNet/blob/master/Figs/RNI15.PNG">
-</p>
-A real high noise example from RNI15 dataset. Our method is able to remove the noise in textured and smooth areas without introducing artifacts
-
-<p align="center">
-  <img width="500" src="https://github.com/saeed-anwar/RIDNet/blob/master/Figs/SSID.PNG">
-</p>
-A challenging example from SSID dataset. Our method can remove noise and restore true colors
-
-![Visual_PSNR_SSIM_BI](/Figs/SSID3.PNG)
-![Visual_PSNR_SSIM_BI](/Figs/SSID2.PNG)
-Few more examples from SSID dataset.
+For more information, please refer to our [papar](https://www.preprints.org/manuscript/202006.0189/v1)
 
 ## Citation
 If you find the code helpful in your resarch or work, please cite the following papers.
