@@ -25,9 +25,9 @@ The network architectures and details are provided in our [paper](https://www.pr
 ### Quick start
 1. Download the trained models of our paper.
 
-    The models for CT-COVID can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1NPMJ_RfB0w_8I_9ZXBHq11pu1xCHWWgC?usp=sharing). The total size for zip is **4.96GB**, which includes models, and images. 
+    The models and images for CT-COVID can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1NPMJ_RfB0w_8I_9ZXBHq11pu1xCHWWgC?usp=sharing). The total size for zip is **4.96GB**. 
     
-    The models for Xray-COVID can be downloaded from [Google Drive](). The total size for zip is **5.70GB**, which includes models, and images. Please cite the respective datasets.Please cite the respective datasets.
+    The models and images for Xray-COVID can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1_mHOT4moxMP761C73jXH9jR7zt1oxKYQ?usp=sharing). The total size for zip is **5.70GB**. Please cite the respective datasets.Please cite the respective datasets.
 
 2. Cd to '/COVIDCT/CNN_methods' or '/COVIDXRAY/CNN_methods', then Cd in to the director of the method you want to test and run the following script.
 
