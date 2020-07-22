@@ -78,7 +78,7 @@ algorithms.
   <img width="500" src="https://github.com/saeed-anwar/COVID19-Baselines/blob/master/Figs/xray_table.png">
 </p>
 
-For more information, please refer to our [papar](https://www.preprints.org/manuscript/202006.0189/v1)
+For more information, please refer to our [paper](https://www.preprints.org/manuscript/202006.0189/v1)
 
 ## Citation
 If you find the code helpful in your resarch or work, please cite the following papers.
